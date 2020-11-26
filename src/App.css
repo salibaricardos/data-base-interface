@@ -36,3 +36,58 @@
     transform: rotate(360deg);
   }
 }
+.ant-form {
+  display: grid;
+  justify-content: center;
+  padding-top: 20px !important;
+}
+.ant-input {
+  margin: 5px !important;
+  background-color: rgba(248, 248, 248, 0.9);
+  border-radius: 5px !important;
+  font-size: 18px !important;
+  width: 200px;
+}
+.ant-input:hover {
+  background-color: rgb(237, 238, 250);
+}
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.buttons .ant-btn {
+  height: 40px;
+  margin: 51px 8px 0 0;
+  padding: 10px 38px;
+  border-radius: 20px;
+  border: solid 1px var(--purple);
+  background-color: rgba(248, 248, 248, 0.9);
+}
+.buttons .ant-btn:focus {
+  outline: none;
+}
+
+.buttons .ant-btn:hover {
+  background-color: rgb(237, 238, 250);
+}
+
+.nav-item {
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+  font-stretch: normal;
+  letter-spacing: 0.13px;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-top: 1%;
+  height: 48px;
+  color: #000000;
+}
+
+.ant-menu {
+  padding: 0px;
+  display: flex !important;
+  flex-wrap: wrap !important;
+  justify-content: center !important;
+}

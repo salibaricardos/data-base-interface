@@ -1,26 +1,42 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Router, Switch, Route } from "react-router-dom";
+import DataEdit from "./pages/dataEdit";
+import DataView from "./pages/datatView";
+import { Menu } from "antd";
+import history from "./history";
+import "antd/dist/antd.css";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <div>
+      <Menu theme="dark" defaultSelectedKeys={["1"]} mode="horizontal">
+        <Menu.Item
+          key="1"
+          className="nav-item"
+          onClick={() => history.push("/")}
         >
-          Learn React
-        </a>
-      </header>
+          <p>Display Data</p>
+        </Menu.Item>
+        <Menu.Item
+          key="2"
+          className="nav-item"
+          onClick={() => history.push("/DataEdit")}
+        >
+          <p>Add Data</p>
+        </Menu.Item>
+      </Menu>
+
+      <Router history={history}>
+        <Switch>
+          <Route exact path="/">
+            <DataView />
+          </Route>
+          <Route path="/DataEdit">
+            <DataEdit />
+          </Route>
+        </Switch>
+      </Router>
     </div>
   );
 }
-
 export default App;
